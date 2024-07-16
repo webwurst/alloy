@@ -36,7 +36,7 @@ Name | Type | Description | Default | Required
 
 The `verbosity` argument must be one of:
 * `"basic"`: A single-line summary of received data is logged to stderr, with a total count of telemetry records for every batch of received logs, metrics or traces.
-* `"normal"`: Currently, this produces the same output as `"basic"` verbosity.
+* `"normal"`: Produces the same output as `"basic"` verbosity.
 * `"detailed"`: All details of every telemetry record are logged to stderr, typically writing multiple lines for every telemetry record.
 
 Example of `"basic"` and `"normal"` output:
@@ -83,7 +83,9 @@ Attributes:
         {"kind": "exporter", "data_type": "traces", "name": "debug"}"
 ```
 
-Note that the above `"detailed"` example was edited to replace all instances of `\n` with a new line.
+{{< admonition type="note" >}}
+All instances of `\n`  in the `"detailed"` example have been replaced with new lines.
+{{< /admonition >}}
 
 ## Blocks
 
