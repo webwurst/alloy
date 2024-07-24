@@ -16,7 +16,7 @@ You can control the verbosity of the logs.
 If necessary, bug reports or feature requests are redirected to the upstream repository.
 {{< /admonition >}}
 
-Multiple `otelcol.exporter.debug` components can be specified by giving them different labels.
+You can specify multiple `otelcol.exporter.debug` components by giving them different labels.
 
 ## Usage
 
@@ -35,16 +35,16 @@ Name | Type | Description | Default | Required
 `sampling_thereafter` | `int`    | Sampling rate after the initial messages are logged. | `500` | no
 
 The `verbosity` argument must be one of:
-* `"basic"`: A single-line summary of received data is logged to stderr, with a total count of telemetry records for every batch of received logs, metrics or traces.
+* `"basic"`: A single-line summary of received data is logged to stderr, with a total count of telemetry records for every batch of received logs, metrics, or traces.
 * `"normal"`: Produces the same output as `"basic"` verbosity.
 * `"detailed"`: All details of every telemetry record are logged to stderr, typically writing multiple lines for every telemetry record.
 
-Example of `"basic"` and `"normal"` output:
+The following example shows `"basic"` and `"normal"` output:
 ```
 ts=2024-06-13T11:24:13.782957Z level=info msg=TracesExporter component_path=/ component_id=otelcol.exporter.debug.default "resource spans": 1, spans: 2
 ```
 
-Example of `"detailed"` output:
+The following example shows `"detailed"` output:
 ```
 ts=2024-06-13T11:24:13.782957Z level=info msg=TracesExporter component_path=/ component_id=otelcol.exporter.debug.default "resource spans"=1 spans=2
 ts=2024-06-13T11:24:13.783101Z level=info msg="ResourceSpans #0
