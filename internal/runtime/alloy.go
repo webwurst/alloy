@@ -315,6 +315,7 @@ func (f *Runtime) loadSource(source *Source, args map[string]any, customComponen
 
 	diags := f.loader.Apply(applyOptions)
 	if !f.loadedOnce.Load() && diags.HasErrors() {
+		fmt.Println("      !!")
 		// The first call to Load should not run any components if there were
 		// errors in the configuration file.
 		return diags

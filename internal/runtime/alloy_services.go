@@ -82,7 +82,7 @@ func (f *Runtime) NewController(id string) service.Controller {
 				Services:        f.opts.Services,
 				OnExportsChange: nil, // NOTE(@tpaschalis, @wildum) The isolated controller shouldn't be able to export any values.
 			},
-			IsModule:       true,
+			IsModule:       false,
 			ModuleRegistry: newModuleRegistry(),
 			WorkerPool:     worker.NewDefaultWorkerPool(),
 		}),
